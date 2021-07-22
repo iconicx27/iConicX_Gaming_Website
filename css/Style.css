@@ -1,0 +1,530 @@
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    /* Theme Colors*/
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+    /* Gradient Colors */
+    --sky: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* ----------------------------Global classes------------------------- */
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+    cursor: pointer;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: lighter;
+    font-size: 3rem;
+}
+
+h2 {
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h3 {
+    font-family: 'Abel', sans-serif;
+    font-size: 2rem;
+}
+
+h4{
+    color: white;
+    font-family: 'Abel', sans-serif;
+    font-weight: lighter;
+    font-size: 1.8rem;
+}
+
+h5{
+    font-size: 1.1rem;
+}
+
+button.btn {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: 'Abel', sans-serif;
+    cursor: pointer;
+}
+
+span {
+    font-family: 'Abel', sans-serif;
+}
+
+.container {
+    margin: 0 1vw;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: lighter;
+    color: rgb(136, 135, 135);
+    padding: 1.3rem 0rem;
+}
+
+/* -X--------------------------Global classes-----------------------X- */
+
+/* -------------------Navbar------------------------- */
+
+.nav {
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 9vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .nav-menu .nav-brand a {
+    font-size: 1.6rem;
+    padding: 1rem 0 .2rem 0;
+    display: block;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.3rem 0;
+}
+
+.nav .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 31rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link {
+    padding: 1.4rem 1.4rem 1.4rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    font-weight: 500;
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: white;
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .social i {
+    padding: 0 .4rem;
+    font-size: 1.2rem;
+}
+
+.nav .social i:hover {
+    color: #a1c4cf;
+}
+
+/* -X-----------------Navbar-----------------------X- */
+
+/* ---------------------------------Main Content-------------------------------- */
+
+/* -----------Site Title------------ */
+
+main .site-title {
+    background: url(../assets/mainbg.jpg);
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.site-background {
+    padding-top: 18rem;
+    text-align: center;
+    color: white;
+}
+
+main .site-title .site-background h1, h3 {
+    margin: .3rem;
+}
+
+main .site-title .site-background .btn {
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+main .site-background .btn:hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+/* -----X-----Site Title-----X------ */
+
+/* ------------Blog-Carousel----------- */
+
+main .blog {
+    background: url(/assets/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+    width: 100%;
+}
+
+main .blog .blog-post {
+    padding-top: 6rem;
+}
+
+main .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 5px 40px whitesmoke;
+}
+
+main .blog-title {
+    padding: 0rem 0rem 2.5rem;
+}
+
+.blog-title h3, span {
+    color: white;
+    display: block;
+    font-weight: lighter;
+}
+
+main .btn-blog {
+    padding: 0.7rem 2rem;
+    background: var(--sky);
+    margin: 0.5rem;
+}
+
+main .btn-blog:hover{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.owl-nav .owl-next .owl-nav-next, .owl-nav .owl-prev .owl-nav-prev {
+    color: var(--text-gray);
+    background: white;
+    font-size: 1.2rem;
+}
+
+/* -----X------Blog-Carousel-----X----- */
+
+/* --------------site content------------ */
+
+main {
+    background-color: rgb(72, 8, 75);
+}
+
+main .site-content {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 6rem 3rem;
+}
+
+main .site-content .post-image img {
+    background-size: cover;
+    height: 100%;
+    width: 90%;
+}
+
+main .post-content {
+    width: 100%;
+}
+
+main .site-content .post-content>.post-image, .post-title {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 90%;
+}
+
+main .site-content .post-content>.post-image>div {
+    overflow: hidden;
+}
+
+main .site-content .post-content>.post-image .img {
+    transition: all 1s ease;
+}
+
+main .site-content .post-content>.post-image .img:hover {
+    transform: scale(1.1);
+}
+
+main .post-content .post-title a {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+main .post-content .post-title .post-btn {
+    border-radius: 0;
+}
+
+.site-content .pagination {
+    justify-content: center;
+    color: white;
+    margin: 4rem 0;
+}
+
+.site-content .pagination a {
+    padding: 0.6rem 0.9rem;
+    border-radius: 2rem;
+    margin: 0 .3rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: grey;
+}
+
+.site-content .pagination .pages {
+    background: whitesmoke;
+}
+
+/* --------X-----site content-------X---- */
+
+/* ---------sidebar---------- */
+
+.site-content>.sidebar .category-list {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.site-content>.sidebar .category-list .list-items {
+    background: var(--sky);
+    padding: 0.4rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content>.sidebar .category-list .list-items a {
+    color: black;
+}
+
+.site-content>.sidebar h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 18px 0 .5rem -0.1rem;
+}
+
+.site-content>.sidebar .post-content .post-title a {
+    font-size: 1.2rem !important;
+}
+
+.site-content .sidebar .newsletter {
+    padding: 8rem 0 2rem 0;
+}
+
+.site-content .sidebar .newsletter .form-element {
+    padding: .5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element {
+    width: 80%;
+    height: 1.9rem;
+    padding: 0.3rem .5rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn {
+    border-radius: 0;
+    padding: 0.8rem 34%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.site-content .sidebar .popular-tags {
+    padding: 2rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag {
+    background: var(--sky);
+    padding: 0.4rem 1rem;
+    border-radius: 3rem;
+    margin: 0.4rem 0.6rem;
+    color: black;
+    cursor: pointer;
+}
+
+/* ----X----sidebar-----X---- */
+
+/* -----------------X------------Main Content------------------X---------- */
+
+/* -------------------------------Footer-------------------------------- */
+
+footer.footer {
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container>div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: .5rem .7rem;
+    border: none;
+    background: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span {
+    background: var(--sky);
+    padding: 0.5rem .9rem;
+    color: black;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div>img {
+    display: inline-block;
+    width: 28%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i {
+    color: white;
+    padding: 0 .4rem;
+}
+
+footer.footer .rights .copyright {
+    color: rgb(180, 176, 176);
+    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 2rem 0rem;
+}
+
+footer.footer .rights .copyright a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer.footer .move-up {
+    position: absolute;
+    right: 5%;
+    top: 18%;
+}
+
+footer.footer .move-up span i {
+    cursor: pointer;
+}
+
+footer.footer .move-up span i:hover {
+    transform: scale(1.2);
+}
+
+/* ---------------X---------------Footer------------------X------------- */
+
+/* ------------Viewport less than or equal to 1130px---------- */
+
+@media only screen and (max-width:1130px) {
+    footer.footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ------X-----Viewport less than or equal to 1130px-----X---- */
+
+/* ------------Viewport less than or equal to 850px---------- */
+
+@media only screen and (max-width:850px) {
+    .nav .nav-menu, .nav .nav-items {
+        flex-direction: column;
+        padding: 0px;
+    }
+    .nav .toggle-collapse {
+        display: initial;
+    }
+    main .site-content {
+        grid-template-columns: 100%;
+    }
+    footer.footer .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer.footer .rights .copyright {
+        margin: 0 1.6rem;
+    }
+    footer.footer .container>div {
+        padding: 1rem;
+    }
+    footer.footer .rights {
+        text-align: center;
+    }
+}
+
+/* -----X------Viewport less than or equal to 850px-----X---- */
+
+/* -----------Viewport less than or equal to 520px--------- */
+
+@media only screen and (max-width:520px) {
+    main .blog {
+        height: 125vh;
+    }
+    nav .toggle-icons {
+        padding: 1.3rem 16px;
+    }
+}
+
+/* -----X------Viewport less than or equal to 520px-----X---- */
